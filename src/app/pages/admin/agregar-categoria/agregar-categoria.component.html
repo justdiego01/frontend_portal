@@ -1,0 +1,36 @@
+<mat-card>
+  <h1>Agregar Categoria</h1>
+  <mat-card-content>
+    <div class="bootstrap-wrapper">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <form (ngSubmit) = "formSubmit()">
+            <mat-form-field class="w-100" appearance = "outline">
+              <mat-label>Titulo</mat-label>
+              <input
+                required
+                type="text"
+                name="titulo"
+                matInput
+                [(ngModel)] = "categoria.titulo"
+              >
+            </mat-form-field>
+            <mat-form-field class="w-100" appearance = "outline">
+              <mat-label>Descripcion</mat-label>
+              <input
+                required
+                type="text"
+                name="descripcion"
+                matInput
+                [(ngModel)] = "categoria.descripcion"
+              >
+            </mat-form-field>
+            <div class="container text-center mt-15">
+              <button mat-raised-button color="primary">Guardar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
