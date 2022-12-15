@@ -6,12 +6,12 @@ import urlbase from './helper';
   providedIn: 'root',
 })
 export class ExamenService {
-  constructor(private http: HttpClient) {}
+  constructor(private http:HttpClient) {}
   
   public listarExamen() {
     return this.http.get(`${urlbase}/examen/obtener`, {
       headers: new HttpHeaders({
-        Authorization: 'Bearer ' + localStorage.getItem('token'),
+        'Authorization': 'Bearer ' + localStorage.getItem('token'),
       }),
     });
   }
@@ -19,7 +19,7 @@ export class ExamenService {
   public agregarExamen(examen: any) {
     return this.http.post(`${urlbase}/examen/agregar`, examen, {
       headers: new HttpHeaders({
-        Authorization: 'Bearer ' + localStorage.getItem('token'),
+        'Authorization': 'Bearer ' + localStorage.getItem('token'),
       }),
     });
   }
@@ -27,7 +27,7 @@ export class ExamenService {
   public modificarExamen(examen: any) {
     return this.http.put(`${urlbase}/examen/modificar`, examen, {
       headers: new HttpHeaders({
-        Authorization: 'Bearer ' + localStorage.getItem('token'),
+        'Authorization': 'Bearer ' + localStorage.getItem('token'),
       }),
     });
   }
@@ -35,7 +35,7 @@ export class ExamenService {
   public obtenerExamenUnico(id: any) {
     return this.http.get(`${urlbase}/examen/obtener/${id}`, {
       headers: new HttpHeaders({
-        Authorization: 'Bearer ' + localStorage.getItem('token'),
+        'Authorization': 'Bearer ' + localStorage.getItem('token'),
       }),
     });
   }
@@ -43,7 +43,7 @@ export class ExamenService {
   public eliminarExamenUnico(id: any) {
     return this.http.delete(`${urlbase}/examen/eliminar/${id}`, {
       headers: new HttpHeaders({
-        Authorization: 'Bearer ' + localStorage.getItem('token'),
+        'Authorization': 'Bearer ' + localStorage.getItem('token'),
       }),
     });
   }
@@ -51,7 +51,7 @@ export class ExamenService {
   public listarExamenCategoria(id: any) {
     return this.http.get(`${urlbase}/examen/categoria/${id}`, {
       headers: new HttpHeaders({
-        Authorization: 'Bearer ' + localStorage.getItem('token'),
+        'Authorization': 'Bearer ' + localStorage.getItem('token'),
       }),
     });
   }
@@ -59,7 +59,7 @@ export class ExamenService {
   public listarExamenActivo() {
     return this.http.get(`${urlbase}/examen/activo`, {
       headers: new HttpHeaders({
-        Authorization: 'Bearer ' + localStorage.getItem('token'),
+        'Authorization': 'Bearer ' + localStorage.getItem('token'),
       }),
     });
   }
@@ -67,7 +67,7 @@ export class ExamenService {
   public listarExamenActivoCategoria(id: any) {
     return this.http.get(`${urlbase}/examen/categoria/activo/${id}`, {
       headers: new HttpHeaders({
-        Authorization: 'Bearer ' + localStorage.getItem('token'),
+        'Authorization': 'Bearer ' + localStorage.getItem('token'),
       }),
     });
   }

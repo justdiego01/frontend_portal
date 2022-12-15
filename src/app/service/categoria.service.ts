@@ -12,7 +12,7 @@ export class CategoriaService {
   public listarCategoria() {
     return this.http.get(`${urlbase}/categoria/obtener`, {
       headers: new HttpHeaders({
-        Authorization: 'Bearer ' + localStorage.getItem('token'),
+        'Authorization': 'Bearer ' + localStorage.getItem('token'),
       }),
     });
   }
@@ -20,7 +20,7 @@ export class CategoriaService {
   public agregarCategoria(categoria:any) {
     return this.http.post(`${urlbase}/categoria/agregar`, categoria, {
       headers: new HttpHeaders({
-        Authorization: 'Bearer ' + localStorage.getItem('token'),
+        'Authorization': 'Bearer ' + localStorage.getItem('token'),
       }),
     });
   }
