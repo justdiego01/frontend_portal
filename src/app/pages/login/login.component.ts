@@ -40,10 +40,10 @@ export class LoginComponent implements OnInit {
           console.log(user);
 
 
-          if (this.logService.getUserRol() == 'Administrador'){
+          if (this.logService.getUserRol() == 'administrador'){
             this.router.navigate(["/admin"]);
             this.logService.loginStatusSubject.next(true);
-          }else if (this.logService.getUserRol() == 'Cliente'){
+          }else if (this.logService.getUserRol() == 'estudiante'){
             this.router.navigate(["/listarClientes"]);
             this.logService.loginStatusSubject.next(true);
           }

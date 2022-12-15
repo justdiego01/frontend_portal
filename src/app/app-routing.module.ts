@@ -60,16 +60,17 @@ const routes: Routes = [
         component: AgregarExamenComponent,
       },
       {
-        path: 'pregunta-view',
+        path: 'pregunta-view/:examenId/:titulo',
         component: PreguntaComponent,
       },
       {
-        path: 'pregunta-add',
+        path: 'pregunta-add/:examenId/:titulo',
         component: AgregarPreguntaComponent,
       },
-      { 
-        path: 'profile', component: ProfileComponent
-      }
+      {
+        path: 'profile',
+        component: ProfileComponent,
+      },
     ],
   },
 ];

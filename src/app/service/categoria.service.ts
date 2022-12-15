@@ -10,7 +10,7 @@ export class CategoriaService {
   constructor(private http:HttpClient) { }
 
   public listarCategoria() {
-    return this.http.get(`${urlbase}/categoria/listar`, {
+    return this.http.get(`${urlbase}/categoria/obtener`, {
       headers: new HttpHeaders({
         Authorization: 'Bearer ' + localStorage.getItem('token'),
       }),
