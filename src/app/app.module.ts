@@ -34,10 +34,8 @@ import { AgregarExamenComponent } from './pages/admin/agregar-examen/agregar-exa
 import { PreguntaComponent } from './pages/admin/pregunta/pregunta.component';
 import { AgregarPreguntaComponent } from './pages/admin/agregar-pregunta/agregar-pregunta.component';
 import { ExamenComponent } from './pages/admin/examen/examen.component';
-
-
-
-
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSelectModule } from '@angular/material/select';
 
 
 @NgModule({
@@ -58,7 +56,7 @@ import { ExamenComponent } from './pages/admin/examen/examen.component';
     AgregarExamenComponent,
     PreguntaComponent,
     AgregarPreguntaComponent,
-    ExamenComponent
+    ExamenComponent,
   ],
   imports: [
     BrowserModule,
@@ -74,9 +72,11 @@ import { ExamenComponent } from './pages/admin/examen/examen.component';
     MatCardModule,
     MatIconModule,
     MatDividerModule,
-    MatListModule
+    MatListModule,
+    MatRadioModule,
+    MatSelectModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
